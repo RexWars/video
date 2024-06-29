@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica-ti Emailul</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="left-box">
+                <h2>Verifica-ti Emailul</h2>
+                <form id="verify-form" action="verify.php" method="POST">
+                    <div class="textbox">
+                        <input type="text" id="verification-code" name="verificationCode" placeholder="Cod de Verificare" required>
+                        <span class="icon">&#128274;</span>
+                    </div>
+                    <button type="submit">Verifica</button>
+                </form>
+            </div>
+            <div class="right-box">
+                <h1>Verifica-ti Emailul</h1>
+                <p>Te rog introdu codul de verificare trimis la emailul tau.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

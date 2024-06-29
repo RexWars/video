@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="left-box">
+                <h2>Înregistrare</h2>
+                <form id="signup-form" action="register.php" method="POST" enctype="multipart/form-data">
+                    <div class="textbox">
+                        <input type="text" id="username-signup" name="username" placeholder="Nume utilizator" required>
+                        <span class="icon">&#128100;</span>
+                    </div>
+                    <div class="textbox">
+                        <input type="email" id="email-signup" name="email" placeholder="Email" required>
+                        <span class="icon">&#9993;</span>
+                    </div>
+                    <div class="textbox">
+                        <input type="file" id="profile-pic" name="profilePic" accept="image/*" required>
+                    </div>
+                    <div class="user-type">
+                        <label>
+                            <input type="radio" name="userType" value="student" required> Student
+                        </label>
+                        <label>
+                            <input type="radio" name="userType" value="professor" required> Profesor
+                        </label>
+                    </div>
+                    <button type="submit">Înregistrează-te</button>
+                    <p>Ai deja un cont? <a href="signin.html">Autentificare</a></p>
+                </form>
+            </div>
+            <div class="right-box">
+                <h1>Bine ai venit!</h1>
+                <p>Alătură-te și începe-ți călătoria astăzi!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

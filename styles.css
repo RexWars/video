@@ -1,0 +1,519 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 60px; /* Asigură spațiu pentru header */
+}
+
+body.light-mode {
+  background-color: #f0f0f0; /* Fundal deschis */
+  color: #333; /* Text închis */
+}
+
+body.dark-mode {
+  background-color: #1a1a2e; /* Fundal întunecat */
+  color: #e0e0e0; /* Text deschis */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+header.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: 20px; /* Adaugă spațiu între buton și lista de navigare */
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+header nav ul li a.light-mode {
+  color: #333;
+}
+
+header nav ul li a.dark-mode {
+  color: #e0e0e0;
+}
+
+header nav ul li a.light-mode:hover {
+  color: #007bff;
+}
+
+header nav ul li a.dark-mode:hover {
+  color: #ff9900;
+}
+
+.toggle-button {
+  cursor: pointer;
+  font-size: 1.5em;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Intro Section Styles */
+#intro {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('path/to/icon') no-repeat center center/cover;
+}
+
+#intro.light-mode {
+  color: #000000;
+}
+
+#intro.dark-mode {
+  color: #ffffff;
+}
+
+#intro h2, #intro p, #intro .intro-logo {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+#intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation-delay: 0.5s;
+}
+
+#intro p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  animation-delay: 1s;
+}
+
+#intro .intro-logo {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Features Section Styles */
+#features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#features.light-mode {
+  background-color: #ffffff;
+}
+
+#features.dark-mode {
+  background-color: #1a1a2e;
+}
+
+#features h2 {
+  color: inherit;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+#features .feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#features .feature {
+  flex: 1 1 200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+#features .feature.light-mode {
+  background: #f9f9f9;
+}
+
+#features .feature.dark-mode {
+  background: #333;
+}
+
+#features .feature:hover {
+  transform: translateY(-10px);
+  background: #007bff;
+  color: #ffffff;
+}
+
+#features .icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+#features .icon.light-mode {
+  color: #007bff;
+}
+
+#features .icon.dark-mode {
+  color: #ff9900;
+}
+
+#features .feature:hover .icon {
+  color: #ffffff;
+}
+
+#features h3 {
+  margin: 15px 0;
+  font-size: 1.3em;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+#features p {
+  font-size: 1em;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+/* FAQs Section Styles */
+#faqs {
+  padding: 60px 20px;
+}
+
+#faqs.light-mode {
+  background-color: #f0f0f0;
+}
+
+#faqs.dark-mode {
+  background-color: #1a1a2e;
+}
+
+#faqs h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: inherit;
+}
+
+#faqs .faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#faqs .faq {
+  margin-bottom: 20px;
+}
+
+#faqs .faq h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: inherit;
+}
+
+#faqs .faq p {
+  font-size: 1em;
+  color: inherit;
+}
+
+/* Feedback Section Styles */
+#feedback {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#feedback.light-mode {
+  background-color: #ffffff;
+}
+
+#feedback.dark-mode {
+  background-color: #1a1a2e;
+}
+
+#feedback h2 {
+  color: inherit;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+#feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  flex-direction: row-reverse;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.rating label:before {
+  content: "\2605";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #007bff;
+}
+
+.rating.light-mode input:checked ~ label,
+.rating.light-mode label:hover,
+.rating.light-mode label:hover ~ label {
+  color: #007bff;
+}
+
+.rating.dark-mode input:checked ~ label,
+.rating.dark-mode label:hover,
+.rating.dark-mode label:hover ~ label {
+  color: #ff9900;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+footer.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+footer .contact-info {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#success-message {
+  color: #28a745;
+  margin-top: 20px;
+}
+
+#error-message {
+  color: #dc3545;
+  margin-top: 20px;
+}
+
+/* Access Section Styles */
+#access {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#access.light-mode {
+  background-color: #f0f0f0;
+}
+
+#access.dark-mode {
+  background-color: #1a1a2e;
+}
+
+#access h2 {
+  color: inherit;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+#access p {
+  color: inherit;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+#access-windows {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+}
+
+#access-windows:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  header .logo h1 {
+    font-size: 1.5em;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0; /* Elimină margin-left pentru vizualizarea pe mobil */
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  #intro {
+    padding: 40px 20px;
+  }
+
+  #intro h2 {
+    font-size: 2em;
+  }
+
+  #intro p {
+    font-size: 1em;
+  }
+
+  #intro .intro-logo {
+    width: 150px;
+  }
+
+  #features .feature-list {
+    flex-direction: column;
+  }
+
+  #features .feature {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #faqs {
+    padding: 40px 20px;
+  }
+
+  #faqs h2 {
+    font-size: 1.8em;
+  }
+
+  #faqs .faq-list {
+    padding: 0 20px;
+  }
+
+  #feedback {
+    padding: 40px 20px;
+  }
+
+  #feedback h2 {
+    font-size: 1.8em;
+  }
+
+  #feedback-form {
+    padding: 0 20px;
+  }
+
+  #access {
+    padding: 40px 20px;
+  }
+
+  #access h2 {
+    font-size: 1.8em;
+  }
+}
