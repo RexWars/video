@@ -12,7 +12,6 @@ function generateVerificationCode($length = 6) {
     return substr(str_shuffle(str_repeat($x='0123456789', ceil($length/strlen($x)))),1,$length);
 }
 
-// Conectare la baza de date (exemplu folosind PDO)
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -82,3 +81,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Cerere invalidă.";
 }
 ?>
+
